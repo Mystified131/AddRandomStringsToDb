@@ -1,0 +1,28 @@
+﻿@model WebApplication2.ViewModels.IndexViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2><br />
+
+
+<p>This code generates random strings with alphabetical elements.</p><br />
+
+<form action='Home/Result' method='POST' align="left">
+
+    <label>
+        Please enter the number of strings to generate. Enter '0' for a random number of strings.
+    </label><br><br>
+    <input name="quant" type="text" value="" />
+    <br /><br />
+
+    <label>
+        Please enter the length of the strings. Enter '0' for a random length.
+    </label><br><br>
+    <input name="leng" type="text" value="" />
+    <br /><br />
+
+    <input type="submit" value="Generate Random Strings" />
+
+</form>
