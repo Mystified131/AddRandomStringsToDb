@@ -21,10 +21,15 @@ namespace WebApplication2.Models
             StringBuilder builder = new StringBuilder();
             Random random = new Random();
             char ch;
+            string chr;
             for (int i = 0; i < size; i++)
             {
                 ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
-                builder.Append(ch);
+                int cse = RandomNumber(0, 2);
+                if (cse == 1) { chr = ch.ToString().ToLower(); }
+                else { chr = ch.ToString(); }
+                builder.Append(chr);
+
             }
 
             if (lowerCase)
