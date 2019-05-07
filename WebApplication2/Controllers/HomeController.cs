@@ -110,11 +110,11 @@ namespace WebApplication2.Controllers
             foreach (Listelement itm in TheList)
             {
                 context.Listelements.Remove(itm);
-                context.SaveChanges();
+                
             }
 
+            context.SaveChanges();
 
-        
             return Redirect("/");
         }
     }
