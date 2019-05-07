@@ -102,6 +102,21 @@ namespace WebApplication2.Controllers
 
         }
 
+        public IActionResult Delete()
+        {
+
+            List<Listelement> TheList = context.Listelements.ToList();
+
+            foreach (Listelement itm in TheList)
+            {
+                context.Listelements.Remove(itm);
+                context.SaveChanges();
+            }
+
+
+        
+            return Redirect("/");
+        }
     }
 
 }
